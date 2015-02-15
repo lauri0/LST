@@ -22,3 +22,7 @@ Soovitaja kutsumiseks ei ole vaja ennast tuvastada
 # Soovitajate nimekiri
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2773468.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
 Soovitajate nimekiri soovitajate perekonnanime tähestikulises järjekorras. Nime peale klikates avaneb leht, kus on kirjas soovitaja presidendi, riigikogu ja kohaliku volikogu kandidaat koos põhjendusega (selle välja täitmine on vabatahtlik). Kursiivis ja nimest komaga eraldatuna on antud soovitaja elukutse/amet, et eristada sama nimega isikuid. Üleval olevat soovitusriba pole tarvis, kui see läheb esilehele. 
+
+# Soovitaja valikud
+![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775408.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
+Sellel leheküljel kuvatakse soovitaja eelistused. Kuvatakse ainult seda infot, mis on parasjagu aktuaalne, ehk teisisõnu, kui nt järgmise kohaliku omavalitsuse volikogu valimiste kandidaate veel teada ei ole, siis seda valikut ei saa ka fikseerida ega kuvada. Soovitatava nime peale klikkides suunatakse isiku erakonna ametlikul koduleheküljel olevale tutvustusele (arvatavasti on selline tutvustus igal kandidaadil olemas).
