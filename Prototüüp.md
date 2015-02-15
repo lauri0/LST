@@ -22,6 +22,7 @@ Sellel leheküljel kuvatakse soovitaja eelistused. Kuvatakse ainult seda infot, 
 
 # Autentimine
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775853.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
+Sisse saab logida vaid ID-kaardi abil. Eduka autentimise järel viiakse soovitaja oma valikute sisestamise lehele.
 
 # Soovitaja valikute sisestamine
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775807.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
