@@ -14,3 +14,11 @@ Toivo Alp
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775300.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
 
 Esileht, mis sarnaneb Google'i esilehele. Otsinguribale on võimalik sisestada soovitaja nimi, mida autocomplete'itakse. Taustal on udustatud toompea või mõni muu valmistele viitav pilt. Üleval oleva "Soovitajad" alt on võimalik avada kõigi soovitajate nimekiri, kus saab tähestiku või mõne muu parameetri (kõige enam otsitud soovitajad, hiljuti lisatud soovitajad vms) järgi soovitajat otsida. 
+
+# Kutse soovitama
+![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2774692.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
+Soovitaja kutsumiseks ei ole vaja ennast tuvastada
+
+# Soovitajate nimekiri
+![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2773468.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
+Soovitajate nimekiri soovitajate perekonnanime tähestikulises järjekorras. Nime peale klikates avaneb leht, kus on kirjas soovitaja presidendi, riigikogu ja kohaliku volikogu kandidaat koos põhjendusega (selle välja täitmine on vabatahtlik). Kursiivis ja nimest komaga eraldatuna on antud soovitaja elukutse/amet, et eristada sama nimega isikuid. Üleval olevat soovitusriba pole tarvis, kui see läheb esilehele. 
