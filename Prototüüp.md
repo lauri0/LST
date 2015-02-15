@@ -24,6 +24,9 @@ Sellel leheküljel kuvatakse soovitaja eelistused. Kuvatakse ainult seda infot, 
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775853.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
 Sisse saab logida vaid ID-kaardi abil. Eduka autentimise järel viiakse soovitaja oma valikute sisestamise lehele.
 
-# Soovitaja valikute sisestamine
+# Soovitatava lisamine 
+![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775460.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
+
+# Soovitaja valikute muutmine/eemaldamine
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775807.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
 Ka oma kandidaadi sisestamisel võiks toimida autocomplete. Sisestada/valida lastakse kandidaati, kelle nimi esineb kandidaatide nimekirjas. Pärast kandidaadi fikseerimist lisatakse automaatselt andmebaasis olev info kandidaadi erakonna nime ja valimisringkonna kohta. Kommentaaride kasti saab soovi korral kirjutada, miks soovitaja antud kandidaati usaldab/soovitab valida.
