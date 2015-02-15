@@ -22,7 +22,11 @@ Sellel leheküljel kuvatakse soovitaja eelistused. Kuvatakse ainult seda infot, 
 
 # Autentimine
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775853.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
-Sisse saab logida vaid ID-kaardi abil. Eduka autentimise järel viiakse soovitaja oma valikute sisestamise lehele.
+Sisse saab logida vaid ID-kaardi abil. Eduka autentimise järel viiakse soovitaja oma valikute sisestamise lehele. Ebaõnnestunud autentimise korral kuvatakse allolev hüpikaken.
+
+# Autentimine ebaõnnestus
+![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775889.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
+Kui autentimine ebaõnnestub, siis kuvatakse hüpikaken.
 
 # Soovitatava lisamine 
 ![](https://poliitilinesoovitusleht.mybalsamiq.com/mockups/2775460.png?key=f72de9e4de0984edc24ab0a181c7c6a195ecf194)
