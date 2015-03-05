@@ -35,7 +35,7 @@
               <artifactId>heroku-maven-plugin</artifactId>
               <version>0.3.3</version>
               <configuration>
-                  <appName>gentle-river-7943</appName>
+                  <appName>nameless-hollows-9873</appName>
               </configuration>
           </plugin>
       </plugins>
