@@ -1,16 +1,14 @@
 package main.java;
-/**
- * Created by siiri on 27/02/15.
- */
+
 import java.sql.*;
 
-public class Comment {
+public class Choice {
 
     int id;
     String firstName;
     String lastName;
     String occupation;
-    String message;
+    String choice;
 
     //static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
@@ -18,12 +16,12 @@ public class Comment {
     static final String PASS = "testParool123";
 
 
-    public Comment(int id, String firstName, String lastName, String occupation, String message){
+    public Choice(int id, String firstName, String lastName, String occupation, String choice){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.occupation = occupation;
-        this.message = message;
+        this.choice = choice;
     }
 
     void saveToDatabase(){
@@ -41,9 +39,8 @@ public class Comment {
 
             //STEP 4: Execute a query
             System.out.println("Creating statement...");
-            //System.out.println(" INSERT INTO comments (id, first_name, last_name, occupation, comment_content) VALUES ("+Integer.toString(id)+",'" +firstName+"','"+lastName+"', '"+occupation+"','"+message+"');");
             stmt = conn.createStatement();
-            stmt.executeUpdate(" INSERT INTO comments (id, first_name, last_name, occupation, comment_content) VALUES ("+Integer.toString(id)+",'" +firstName+"','"+lastName+"', '"+occupation+"','"+message+"');");
+            stmt.executeUpdate(" INSERT INTO choices (id, first_name, last_name, occupation, choice) VALUES ("+Integer.toString(id)+",'" +firstName+"','"+lastName+"', '"+occupation+"','"+choice+"');");
             //ResultSet rs = stmt.executeQuery(sql);
 
 
@@ -72,7 +69,7 @@ public class Comment {
     System.out.println("Goodbye!");
     }
 
-    static Comment getCommentByID(int number){
+    static Choice getChoiceByID(int number){
 
         Connection conn = null;
         Statement stmt = null;
@@ -88,8 +85,8 @@ public class Comment {
 
             stmt = conn.createStatement();
             String sql;
-            System.out.println("SELECT id, first_name, last_name, occupation, comment_content FROM comments WHERE id = " + Integer.toString(number) + ";");
-            sql = "SELECT id, first_name, last_name, occupation, comment_content FROM comments WHERE id = " + Integer.toString(number) + ";";
+            System.out.println("SELECT id, first_name, last_name, occupation, comment_content FROM choices WHERE id = " + Integer.toString(number) + ";");
+            sql = "SELECT id, first_name, last_name, occupation, choice FROM choices WHERE id = " + Integer.toString(number) + ";";
             ResultSet rs = stmt.executeQuery(sql);
 
             if(rs.next()){
@@ -97,9 +94,9 @@ public class Comment {
                 String fName = rs.getString("first_name");
                 String lName = rs.getString("last_name");
                 String occupation = rs.getString("occupation");
-                String message = rs.getString("comment_content");
-                Comment comment = new Comment(id, fName, lName, occupation, message);
-                return comment;
+                String choice = rs.getString("choice");
+                Choice entry = new Choice(id, fName, lName, occupation, choice);
+                return entry;
             }
 
             stmt.close();
@@ -134,12 +131,12 @@ public class Comment {
 
     @Override
     public String toString() {
-        return "Comment{" +
+        return "Entry{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", occupation='" + occupation + '\'' +
-                ", message='" + message + '\'' +
+                ", choice='" + choice + '\'' +
                 '}';
     }
 
