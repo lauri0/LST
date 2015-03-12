@@ -24,7 +24,6 @@ public class ChoiceServlet extends HttpServlet {
         System.out.println(choiceEntry);
         Choice ent = new Choice(1, "Meelis", "Mustik", "kokk", choiceEntry);
         ent.saveToDatabase();
-        //Choice comment2 = new Choice(2, "Kadri", "Kaasik", "poliitik", "tere-tere");
         System.out.println(Choice.getChoiceByID(1));
         request.setAttribute("data", ent);
         request.getRequestDispatcher("/WEB-INF/tervitaja.jsp").forward(request, response);
