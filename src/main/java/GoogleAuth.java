@@ -22,7 +22,7 @@ public final class GoogleAuth {
     /**
      * Callback URI that google will redirect to after successful authentication
      */
-    private static final String CALLBACK_URI = "http://localhost:8080/index";
+    private static final String CALLBACK_URI = "http://localhost:8088/index";
 
     // Google authentication constants
     private static final Iterable<String> SCOPE = Arrays.asList("https://www.googleapis.com/auth/userinfo.profile;https://www.googleapis.com/auth/userinfo.email".split(";"));
