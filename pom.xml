@@ -3,7 +3,6 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>UT</groupId>
   <artifactId>polSov</artifactId>
-  <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
   <name>polSov Maven Webapp</name>
   <url>http://maven.apache.org</url>
