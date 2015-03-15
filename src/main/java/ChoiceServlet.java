@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class ChoiceServlet extends HttpServlet {
-
+/*
     public ChoiceServlet(){
 
     }
@@ -30,4 +30,5 @@ public class ChoiceServlet extends HttpServlet {
         //request.getRequestDispatcher("/WEB-INF/referee.jsp").forward(request, response);
 
     }
+    */
 }

@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class Choice {
 
-    int id;
+/*    int id;
     String firstName;
     String lastName;
     String occupation;
@@ -129,5 +129,5 @@ public class Choice {
                 ", choice='" + choice + '\'' +
                 '}';
     }
-
+*/
 }
