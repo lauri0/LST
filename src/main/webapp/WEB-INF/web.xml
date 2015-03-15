@@ -12,14 +12,14 @@
         <url-pattern>/tere</url-pattern>
     </servlet-mapping>
 
-    <servlet>
+    <!--<servlet>
         <servlet-name>ChoiceServlet</servlet-name>
         <servlet-class>main.java.ChoiceServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ChoiceServlet</servlet-name>
         <url-pattern>/choice</url-pattern>
-    </servlet-mapping>
+    </servlet-mapping> -->
 
     <servlet>
         <servlet-name>CommentServlet</servlet-name>
