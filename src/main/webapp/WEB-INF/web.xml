@@ -2,10 +2,10 @@
 <web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-         version="3.1">
+         version="3.0">
     <servlet>
         <servlet-name>TestServlet</servlet-name>
-        <servlet-class>main.java.TestServlet</servlet-class>
+        <servlet-class>TestServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>TestServlet</servlet-name>
@@ -23,7 +23,7 @@
 
     <servlet>
         <servlet-name>CommentServlet</servlet-name>
-        <servlet-class>main.java.CommentServlet</servlet-class>
+        <servlet-class>CommentServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>CommentServlet</servlet-name>
@@ -32,7 +32,7 @@
 
     <servlet>
         <servlet-name>FirstPageServlet</servlet-name>
-        <servlet-class>main.java.FirstPageServlet</servlet-class>
+        <servlet-class>FirstPageServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>FirstPageServlet</servlet-name>
@@ -41,7 +41,7 @@
 
     <servlet>
         <servlet-name>RefereeServlet</servlet-name>
-        <servlet-class>main.java.RefereeServlet</servlet-class>
+        <servlet-class>RefereeServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>RefereeServlet</servlet-name>
