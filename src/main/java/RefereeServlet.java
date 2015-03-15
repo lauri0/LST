@@ -1,8 +1,8 @@
-package main.java; /**
+ /**
  * Created by siiri on 01/03/15.
  */
 
-import main.java.Referee;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

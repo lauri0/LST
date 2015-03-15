@@ -1,4 +1,4 @@
-package main.java;
+
 
 
 import javax.servlet.ServletException;
@@ -23,7 +23,7 @@ public class CommentServlet extends HttpServlet {
 
         String commentMessage = request.getParameter("testComment");
         System.out.println(commentMessage);
-        Comment comment = new main.java.Comment(1, "Mari", "Maasik", "ajakirjanik", commentMessage);
+        Comment comment = new Comment(1, "Mari", "Maasik", "ajakirjanik", commentMessage);
         comment.saveToDatabase();
         Comment comment2 = new Comment(2, "Kadri", "Kaasik", "poliitik", "tere-tere");
         System.out.println(Comment.getCommentByID(1));

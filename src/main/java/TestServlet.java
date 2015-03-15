@@ -1,4 +1,4 @@
-package main.java; /**
+ /**
  * Created by siiri on 26/02/15.
  */
 

@@ -1,4 +1,4 @@
-package main.java; /**
+/**
  * Created by siiri on 01/03/15.
  */
 import java.sql.*;
