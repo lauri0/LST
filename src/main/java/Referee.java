@@ -47,8 +47,8 @@ public class Referee {
 
             stmt = conn.createStatement();
             String sql;
-            System.out.println("SELECT id, first_name, last_name, occupation FROM referees WHERE first_name = " + "'" + firstName + "'" + " AND last_name = " + "'" + lastName + "'" + ";");
-            sql = "SELECT id, first_name, last_name, occupation FROM referees WHERE first_name = " + "'" + firstName + "'" + " AND last_name = " + "'" + lastName + "'" + ";";
+            System.out.println("SELECT id, first_name, last_name, occupation FROM referee WHERE first_name = " + "'" + firstName + "'" + " AND last_name = " + "'" + lastName + "'" + ";");
+            sql = "SELECT id, first_name, last_name, occupation FROM referee WHERE first_name = " + "'" + firstName + "'" + " AND last_name = " + "'" + lastName + "'" + ";";
             ResultSet rs = stmt.executeQuery(sql);
 
             if(rs.next()){
