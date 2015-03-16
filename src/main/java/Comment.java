@@ -2,6 +2,8 @@
 /**
  * Created by siiri on 27/02/15.
  */
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.*;
 
 public class Comment {
@@ -12,9 +14,9 @@ public class Comment {
     String occupation;
     String message;
 
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
-    static final String USER = "postgres";
-    static final String PASS = "testParool123";
+    //static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
+    //static final String USER = "postgres";
+    //static final String PASS = "testParool123";
 
 
     public Comment(int id, String firstName, String lastName, String occupation, String message){
@@ -25,6 +27,16 @@ public class Comment {
         this.message = message;
     }
 
+    private static Connection getConnection() throws URISyntaxException, SQLException {
+        URI dbUri = new URI(System.getenv("DATABASE_URL"));
+
+        String username = dbUri.getUserInfo().split(":")[0];
+        String password = dbUri.getUserInfo().split(":")[1];
+        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+
+        return DriverManager.getConnection(dbUrl, username, password);
+    }
+
     void saveToDatabase(){
 
         Connection conn = null;
@@ -32,8 +44,9 @@ public class Comment {
 
         try{
 
-            Class.forName("org.postgresql.Driver");
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            //Class.forName("org.postgresql.Driver");
+            //conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            conn = getConnection();
             //System.out.println(" INSERT INTO comments (id, first_name, last_name, occupation, comment_content) VALUES ("+Integer.toString(id)+",'" +firstName+"','"+lastName+"', '"+occupation+"','"+message+"');");
             stmt = conn.createStatement();
             stmt.executeUpdate(" INSERT INTO comments (id, first_name, last_name, occupation, comment_content) VALUES ("+Integer.toString(id)+",'" +firstName+"','"+lastName+"', '"+occupation+"','"+message+"');");
@@ -73,7 +86,8 @@ public class Comment {
 
         try{
 
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            //conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            conn = getConnection();
             stmt = conn.createStatement();
             String sql;
             System.out.println("SELECT id, first_name, last_name, occupation, comment_content FROM comments WHERE id = " + Integer.toString(number) + ";");
