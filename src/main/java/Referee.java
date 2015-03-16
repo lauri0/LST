@@ -1,6 +1,8 @@
 /**
  * Created by siiri on 01/03/15.
  */
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.sql.*;
 
 public class Referee {
@@ -11,9 +13,9 @@ public class Referee {
     private String occupation;
 
 
-    static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
-    static final String USER = "postgres";
-    static final String PASS = "testParool123";
+    //static final String DB_URL = "jdbc:postgresql://localhost:5432/postgres";
+    //static final String USER = "postgres";
+    //static final String PASS = "testParool123";
 
     public Referee(int id, String firstName, String lastName, String occupation){
         this.id = id;
@@ -22,15 +24,26 @@ public class Referee {
         this.occupation = occupation;
     }
 
+    private static Connection getConnection() throws URISyntaxException, SQLException {
+        URI dbUri = new URI(System.getenv("DATABASE_URL"));
+
+        String username = dbUri.getUserInfo().split(":")[0];
+        String password = dbUri.getUserInfo().split(":")[1];
+        String dbUrl = "jdbc:postgresql://" + dbUri.getHost() + ':' + dbUri.getPort() + dbUri.getPath();
+
+        return DriverManager.getConnection(dbUrl, username, password);
+    }
+
     static Referee getRefereeByName(String firstName, String lastName){
         Connection conn = null;
         Statement stmt = null;
 
         try{
 
-            Class.forName("org.postgresql.Driver");
+            //Class.forName("org.postgresql.Driver");
 
-            conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            //conn = DriverManager.getConnection(DB_URL,USER,PASS);
+            conn = getConnection();
 
             stmt = conn.createStatement();
             String sql;
