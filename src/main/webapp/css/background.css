@@ -33,14 +33,15 @@
     background: rgba(255, 255, 255, 0.45); /* 4th parameter is alpha - opacity from 0-1 */
     background-size: cover;
     border-radius: 3px; /*rounded corners to elements */
-    height: 200px;
+    /*height: 200px;*/
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    //top: 350px;
+    /*top: 350px;*/
     left: 0;
     position: fixed;
-    margin-left: 20px;
-    margin-right: 20px;
+    /*margin-left: 20px;
+    margin-right: 20px;*/
+    margin: 20px 20px;
     right: 0;
     z-index: 2; /* element with greater stack order is always in front of an element with a lower stack order */
     padding: 0 10px; /* text padding from each side */
