@@ -11,6 +11,8 @@
     <title></title>
 </head>
 <body>
+    <div class="background-image"></div>
+    <div class="fullscreen-content">
 <div>
     Eesnimi: ${ref.firstName}
 </div>
@@ -20,6 +22,6 @@
 <div>
     Amet: ${ref.occupation}
 </div>
-
+    </div>
 </body>
 </html>
