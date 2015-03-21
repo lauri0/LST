@@ -11,6 +11,8 @@ import com.google.api.client.http.HttpTransport;
 import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.JsonFactory;
 import com.google.api.client.json.jackson.JacksonFactory;
+import org.json.JSONObject;
+import org.json.JSONException;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Arrays;
@@ -22,7 +24,7 @@ public final class GoogleAuth {
     /**
      * Callback URI that google will redirect to after successful authentication
      */
-    private static final String CALLBACK_URI = "http://localhost:8088/index";
+    private static final String CALLBACK_URI = "http://localhost:8088/auth";
 
     // Google authentication constants
     private static final Iterable<String> SCOPE = Arrays.asList("https://www.googleapis.com/auth/userinfo.profile;https://www.googleapis.com/auth/userinfo.email".split(";"));
@@ -34,6 +36,8 @@ public final class GoogleAuth {
 
     private final GoogleAuthorizationCodeFlow flow;
 
+    private static String userName;
+
     /**
      * Constructor initializes the Google Authorization Code Flow with CLIENT ID, SECRET, and SCOPE
      */
@@ -42,6 +46,8 @@ public final class GoogleAuth {
                 JSON_FACTORY, CLIENT_ID, CLIENT_SECRET, SCOPE).build();
 
         generateStateToken();
+
+        userName = null;
     }
 
     /**
@@ -63,6 +69,10 @@ public final class GoogleAuth {
 
         stateToken = "google;"+sr1.nextInt();
 
+    }
+
+    public void logOut() {
+        // TODO
     }
 
     /**
@@ -90,5 +100,20 @@ public final class GoogleAuth {
 
         return jsonIdentity;
 
+    }
+
+    public String getNameFromJson(String json) throws JSONException {
+        JSONObject obj = new JSONObject(json);
+        String realName = obj.getString("name");
+
+        return realName;
+    }
+
+    public static String getUserName() {
+        return userName;
+    }
+
+    public static void setUserName(String name) {
+        userName = name;
     }
 }

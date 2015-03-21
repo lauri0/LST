@@ -27,7 +27,6 @@ public class ChoiceServlet extends HttpServlet {
         System.out.println(Choice.getChoiceByID(1));
         request.setAttribute("data", ent);
         request.getRequestDispatcher("/WEB-INF/tervitaja.jsp").forward(request, response);
-        //request.getRequestDispatcher("/WEB-INF/referee.jsp").forward(request, response);
 
     }
 }
