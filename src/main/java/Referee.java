@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Referee {
 
+    public static final int NOT_SAVED = -1;
     private int id;
     private String firstName;
     private String lastName;
@@ -12,7 +13,7 @@ public class Referee {
     private String email;
 
 
-    public Referee(int id, String firstName, String lastName, String occupation, String email){
+    private Referee(int id, String firstName, String lastName, String occupation, String email){
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -20,7 +21,16 @@ public class Referee {
         this.email = email;
     }
 
-    static Referee getRefereeByName(String firstName, String lastName){
+    public Referee(String firstName, String lastName, String occupation, String email){
+        this.id = NOT_SAVED;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.occupation = occupation;
+        this.email = email;
+    }
+
+    static Referee getRefereeByName(String firstName, String lastName) {
+
         Connection conn = null;
         Statement stmt = null;
 
@@ -126,6 +136,80 @@ public class Referee {
         return null;
     }
 
+    void save() throws ClassNotFoundException, SQLException, URISyntaxException {
+
+        Connection conn = null;
+        Statement stmt = null;
+
+        conn = DatabaseConnection.getConnection();
+
+
+        String firstName = getFirstName();
+        String lastName = getLastName();
+        String occupation = getOccupation();
+        String email = getEmail();
+        int id = getId();
+
+        // if referee_id = -1, it means that he is not saved to database. Lets add referee info to referee table, and return he's autoincremented id with RETURNING. Referees id is valuated to this number.
+        if(this.id == NOT_SAVED){
+            String insertStatement = "INSERT INTO referee (first_name, last_name, occupation, email) VALUES (?,?,?,?) RETURNING id;";
+            PreparedStatement stmt2 = conn.prepareStatement(insertStatement);
+            stmt2.setString(1, firstName);
+            stmt2.setString(2, lastName);
+            stmt2.setString(3, occupation);
+            stmt2.setString(4, email);
+            stmt2.execute();
+            ResultSet rs = stmt2.getResultSet();
+            rs.next();
+            this.id = rs.getInt("id");
+            System.out.println("Isiku id on:");
+            System.out.println(id);
+        }
+
+        //referee_id has already been saved. In that case, lets update information about referee.
+        else{
+            String updateStatement = "UPDATE referee SET first_name=?, last_name=?,occupation=?, email=? WHERE id=?;";
+            PreparedStatement stmt2 = conn.prepareStatement(updateStatement);
+            stmt2.setString(1, firstName);
+            stmt2.setString(2, lastName);
+            stmt2.setString(3, occupation);
+            stmt2.setString(4,email);
+            stmt2.setInt(5,id);
+            stmt2.execute();
+
+        }
+
+
+    }
+
+    void saveRefereeDataToDataBase(Comment comment, Referee ref) throws URISyntaxException, SQLException, ClassNotFoundException {
+
+        String email = ref.getEmail();
+
+        Connection conn = null;
+        PreparedStatement stmt3 = null;
+
+        conn = DatabaseConnection.getConnection();
+
+        comment.save();
+        ref.save();
+
+        int commentId = comment.getId();
+        int refId = ref.getId();
+
+        String insertStatement = "INSERT INTO referee_choices (referee_id, election_id, comment_id, candidate_id) VALUES (?,?,?,?);";
+        stmt3 = conn.prepareStatement(insertStatement);
+        stmt3.setInt(1, refId);
+        stmt3.setInt(2, 1);
+        stmt3.setInt(3, commentId);
+        stmt3.setInt(4, 1);
+        stmt3.execute();
+        //TODO: get candidate id. At the moment it adds candidate 1
+
+        stmt3.close();
+        conn.close();
+    }
+
 
     public String getFirstName() {
         return firstName;
@@ -145,6 +229,10 @@ public class Referee {
 
     public String getEmail() {
         return email;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
     }
 
     public String toString() {
