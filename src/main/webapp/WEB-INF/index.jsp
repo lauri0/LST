@@ -17,9 +17,8 @@
 
 </head>
 <body>
-    <P ALIGN="right">${name}</P>
     <p style="text-align: right">
-        <a href="http://localhost:8088/auth">${loginlogout}</a>
+        <a href="http://localhost:8088/auth">Lisa ennast andmebaasi</a>
     </p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
