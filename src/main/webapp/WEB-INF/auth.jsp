@@ -10,6 +10,7 @@
     <title></title>
 </head>
 <body>
+<%@ page import="main.java.*" %>
 <%
     final GoogleAuth helper = new GoogleAuth();
     if (request.getParameter("code") == null
