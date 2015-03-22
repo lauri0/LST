@@ -41,7 +41,7 @@
 
     <servlet>
         <servlet-name>GoogleAuthServlet</servlet-name>
-        <servlet-class>main.java.GoogleAuthServlet</servlet-class>
+        <servlet-class>GoogleAuthServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>GoogleAuthServlet</servlet-name>
@@ -64,5 +64,14 @@
     <servlet-mapping>
         <servlet-name>RefereeListServlet</servlet-name>
         <url-pattern>/soovitajate-nimekiri</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ElectionServlet</servlet-name>
+        <servlet-class>ElectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ElectionServlet</servlet-name>
+        <url-pattern>/statistika</url-pattern>
     </servlet-mapping>
 </web-app>

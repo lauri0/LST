@@ -17,7 +17,7 @@ public class Election {
         this.id = id;
     }
 
-    public void returnNumberOfReferees() throws ClassNotFoundException, SQLException, URISyntaxException {
+    public String returnNumberOfReferees() throws ClassNotFoundException, SQLException, URISyntaxException {
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -36,10 +36,10 @@ public class Election {
             String electionType = rs.getString("type");
             int numberOfRefereesPerElection = rs.getInt("soovitajate_arv");
 
-            System.out.println(electionType + " " + numberOfRefereesPerElection);
+            return electionType + " " + numberOfRefereesPerElection;
         }
 
-
+        return null;
     }
 
     public static int getParliamentElectionId() {
