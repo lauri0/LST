@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>Soovitajate nimekiri</title>
     <link rel="stylesheet" type="text/css" href="css/background.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 </head>

@@ -18,7 +18,7 @@
 </head>
 <body>
     <p style="text-align: right">
-        <a href="https://nameless-hollows-9873.herokuapp.com/index">Lisa ennast andmebaasi</a>
+        <a href="https://nameless-hollows-9873.herokuapp.com/auth">Lisa ennast andmebaasi</a>
     </p>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
