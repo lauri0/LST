@@ -24,8 +24,43 @@
           <artifactId>jstl</artifactId>
           <version>1.2</version>
       </dependency>
-
+      <dependency>
+          <groupId>com.google.http-client</groupId>
+          <artifactId>google-http-client</artifactId>
+          <version>1.13.1-beta</version>
+      </dependency>
+      <dependency>
+          <groupId>com.google.http-client</groupId>
+          <artifactId>google-http-client-jackson</artifactId>
+          <version>1.13.1-beta</version>
+      </dependency>
+      <dependency>
+          <groupId>javax</groupId>
+          <artifactId>javaee-web-api</artifactId>
+          <version>6.0</version>
+          <scope>provided</scope>
+      </dependency>
+      <dependency>
+          <groupId>com.google.apis</groupId>
+          <artifactId>google-api-services-oauth2</artifactId>
+          <version>v2-rev29-1.13.2-beta</version>
+      </dependency>
+      <dependency>
+          <groupId>org.json</groupId>
+          <artifactId>json</artifactId>
+          <version>20090211</version>
+      </dependency>
   </dependencies>
+    <repositories>
+        <repository>
+            <id>google-api-services</id>
+            <url>http://google-api-client-libraries.appspot.com/mavenrepo</url>
+        </repository>
+        <repository>
+            <id>org.json</id>
+            <url>https://github.com/douglascrockford/JSON-java</url>
+        </repository>
+    </repositories>
   <build>
       <plugins>
           <plugin>

@@ -40,6 +40,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>GoogleAuthServlet</servlet-name>
+        <servlet-class>main.java.GoogleAuthServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GoogleAuthServlet</servlet-name>
+        <url-pattern>/auth</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>RefereeServlet</servlet-name>
         <servlet-class>RefereeServlet</servlet-class>
     </servlet>
