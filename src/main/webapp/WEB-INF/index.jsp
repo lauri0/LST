@@ -21,12 +21,12 @@
     <script src="js/bootstrap.min.js"></script>
     <div class="background-image"></div>
     <div class="content">
-    <form class="input-group" action="/soovitaja" method="get">
-        <input type="text" name="referee" class="form-control" id="searchbar" placeholder="Sisesta soovitaja nimi">
-        <span class="input-group-btn" id="button-container">
-            <button type="submit" class="btn btn-primary btn-block">Mine</button>
-        </span>
-    </form>
+        <form class="input-group" action="/soovitaja" method="get">
+            <input type="text" name="referee" class="form-control" id="searchbar" placeholder="Sisesta soovitaja nimi">
+            <span class="input-group-btn" id="button-container">
+                <button type="submit" class="btn btn-primary btn-block">Mine</button>
+            </span>
+        </form>
     </div>
 </body>
 </html>

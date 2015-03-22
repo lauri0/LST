@@ -48,4 +48,12 @@
         <url-pattern>/soovitaja</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>RefereeListServlet</servlet-name>
+        <servlet-class>RefereeListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RefereeListServlet</servlet-name>
+        <url-pattern>/soovitajate-nimekiri</url-pattern>
+    </servlet-mapping>
 </web-app>

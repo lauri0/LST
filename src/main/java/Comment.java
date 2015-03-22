@@ -40,7 +40,7 @@ public class Comment {
         }
         else {
             stmt.executeUpdate("UPDATE comment SET message=" + " '" + this.message + "' " + " WHERE comment.id = " + " '" + this.id + "' " + ";");
-          
+
         }
 
     }

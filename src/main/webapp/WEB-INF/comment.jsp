@@ -11,8 +11,10 @@
     <title></title>
 </head>
 <body>
-    <form action="/comment" method="post">Kommentaar:<BR>
-        <input type="text" name="testComment">
+    <form action="/comment" method="post">Amet:<BR>
+        <input type="text" name="testOccupation"> <br>
+        Kommentaar:<br>
+        <input type="text" name="testComment"><br>
         <input type="submit" value="Salvesta"/>
     </form>
 </body>
