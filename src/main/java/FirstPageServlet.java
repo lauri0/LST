@@ -17,7 +17,7 @@ public class FirstPageServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        String name = main.java.GoogleAuth.getUserName();
+        String name = GoogleAuth.getUserName();
         String inOut = "Log out";
         if (name == null) {
             name = "Pole veel sisse loginud";
