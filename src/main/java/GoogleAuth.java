@@ -1,5 +1,3 @@
-package main.java;
-
 import com.google.api.client.auth.oauth2.Credential;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeRequestUrl;
@@ -36,8 +34,6 @@ public final class GoogleAuth {
 
     private final GoogleAuthorizationCodeFlow flow;
 
-    private static String userName;
-
     /**
      * Constructor initializes the Google Authorization Code Flow with CLIENT ID, SECRET, and SCOPE
      */
@@ -46,8 +42,6 @@ public final class GoogleAuth {
                 JSON_FACTORY, CLIENT_ID, CLIENT_SECRET, SCOPE).build();
 
         generateStateToken();
-
-        userName = null;
     }
 
     /**
@@ -69,10 +63,6 @@ public final class GoogleAuth {
 
         stateToken = "google;"+sr1.nextInt();
 
-    }
-
-    public void logOut() {
-        // TODO
     }
 
     /**
@@ -109,11 +99,4 @@ public final class GoogleAuth {
         return realName;
     }
 
-    public static String getUserName() {
-        return userName;
-    }
-
-    public static void setUserName(String name) {
-        userName = name;
-    }
 }
