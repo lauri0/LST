@@ -1,6 +1,7 @@
 .background-image{
 
-    background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');
+   /* background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');*/
+    background-image:url('/images/riigikogu_otto.jpg');
 
     background-size: cover; /* specifies the size of the background images*/
     display: block;
