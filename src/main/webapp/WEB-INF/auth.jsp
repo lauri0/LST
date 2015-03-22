@@ -11,7 +11,7 @@
 </head>
 <body>
 <%
-    final main.java.GoogleAuth helper = new main.java.GoogleAuth();
+    final GoogleAuth helper = new GoogleAuth();
     if (request.getParameter("code") == null
             || request.getParameter("state") == null) {
         String redirectLocation = "./index";
@@ -44,11 +44,11 @@
         String firstName = names[0];
         String surName = names[1];
 
-        if (main.java.Referee.getRefereeByName(firstName, surName) == null) {
+        if (Referee.getRefereeByName(firstName, surName) == null) {
             String occupation = "teadmata amet";
             String email = "varjatud meiliaadress";
-            main.java.Referee ref = new main.java.Referee(firstName, surName, occupation, email);
-            main.java.Comment comment = new main.java.Comment("Mingi kommentaar");
+            Referee ref = new Referee(firstName, surName, occupation, email);
+            Comment comment = new Comment("Mingi kommentaar");
             ref.saveRefereeDataToDataBase(comment, ref);
         }
 
