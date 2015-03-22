@@ -8,7 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title></title>
+    <title>Kommentaar</title>
 </head>
 <body>
     <form action="/comment" method="post">Amet:<BR>
