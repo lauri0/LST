@@ -11,10 +11,8 @@
 <html>
 <head>
     <title>Poliitiline soovitusleht</title>
-
     <link rel="stylesheet" type="text/css" href="css/background.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-
 </head>
 <body>
     <div class='wrapper text-right'>
