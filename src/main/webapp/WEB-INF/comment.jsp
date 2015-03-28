@@ -11,6 +11,7 @@
     <title></title>
 </head>
 <body>
+    ${firstName}
     <form action="/comment" method="post">Amet:<BR>
         <input type="text" name="testOccupation"> <br>
         Kommentaar:<br>

@@ -28,6 +28,7 @@ public class ElectionServlet extends HttpServlet {
         } catch (URISyntaxException e) {
             e.printStackTrace();
         }
+        System.out.println(stats);
         request.setAttribute("statistics",stats);
 
 

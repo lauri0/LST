@@ -99,4 +99,11 @@ public final class GoogleAuth {
         return realName;
     }
 
+    public String getEmailFromJson(String json) throws JSONException {
+        JSONObject obj = new JSONObject(json);
+        String email = obj.getString("email");
+
+        return email;
+    }
+
 }

@@ -1,8 +1,6 @@
- /**
+/**
  * Created by siiri on 01/03/15.
  */
-
-
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

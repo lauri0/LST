@@ -29,7 +29,7 @@ public class Referee {
         this.email = email;
     }
 
-    static Referee getRefereeByName(String firstName, String lastName) {
+    public static Referee getRefereeByName(String firstName, String lastName) {
 
         Connection conn = null;
         Statement stmt = null;
@@ -182,7 +182,7 @@ public class Referee {
 
     }
 
-    void saveRefereeDataToDataBase(Comment comment, Referee ref) throws URISyntaxException, SQLException, ClassNotFoundException {
+    public void saveRefereeDataToDataBase(Comment comment, Referee ref) throws URISyntaxException, SQLException, ClassNotFoundException {
 
         String email = ref.getEmail();
 
