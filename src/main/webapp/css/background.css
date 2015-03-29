@@ -1,10 +1,11 @@
 .background-image{
 
-    background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');
+   /* background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');*/
+    background-image:url('/images/riigikogu_otto.jpg');
 
     background-size: cover; /* specifies the size of the background images*/
     display: block;
-    filter: blur(1px); /*enne oli 5*/
+    filter: blur(3px); /*enne oli 5*/
     -webkit-filter: blur(5px); /*enne oli 15*/
     height: 800px;
     left: 0;
@@ -30,19 +31,30 @@
     padding: 0 10px; /* text padding from each side */
 }
 
+#intro{
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    top: 130px;
+    left: 430px;
+    z-index: 2;
+    font-weight: 900;
+    font-family: Ubuntu, sans-serif;
+    color:#ffffff;
+
+}
+
 .fullscreen-content{
-    background: rgba(255, 255, 255, 0.50); /* 4th parameter is alpha - opacity from 0-1 */
-    height:90%;
+    background: rgba(255, 255, 255, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
+    height:50%;
+    width:800px;
     border-radius: 3px; /*rounded corners to elements */
-    /*height: 200px;*/
-    /*box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);*/
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    /*top: 350px;*/
     left: 0;
     position: fixed;
-    /*margin-left: 20px;
-    margin-right: 20px;*/
-    margin: 40px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 230px;
     right: 0;
     z-index: 2; /* element with greater stack order is always in front of an element with a lower stack order */
     padding: 0 10px; /* text padding from each side */
@@ -59,7 +71,7 @@
 }
 
 #searchbar{
-    width:600px;
+    width:550px;
 }
 
 #candidate-intro{
@@ -69,28 +81,37 @@
     font-weight: bold;
     font-size:130%;
 
+
 }
 
 #candidate-name{
     margin-left:40px;
-    margin-top:55px;
+    margin-top:50px;
     font-family: sans-serif;
     font-weight: bold;
-    font-size:130%;
+    font-size:150%;
 }
 
 #comment{
     margin-left:40px;
     margin-right:40px;
-    margin-top:60px;
+    margin-top:40px;
     text-align:justify;
     font-family: sans-serif;
-    font-weight: bold;
     font-style: italic;
     font-size:130%;
 }
 
 #referees-list{
+    margin-left:40px;
+    margin-right:40px;
+    margin-top:50px;
+    text-align:justify;
+    font-family: sans-serif;
+    font-size:130%;
+}
+
+#statistics{
     margin-left:40px;
     margin-right:40px;
     margin-top:50px;

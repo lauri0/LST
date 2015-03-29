@@ -11,15 +11,17 @@
 <html>
 <head>
     <title>Poliitiline soovitusleht</title>
-
     <link rel="stylesheet" type="text/css" href="css/background.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-
 </head>
 <body>
-    <p style="text-align: right">
-        <a href="./auth">Lisa ennast andmebaasi</a>
-    </p>
+<div class='wrapper text-right'>
+    <div class="btn-group btn-group-sm">
+        <a href="/soovitajate-nimekiri" class="btn btn-primary">Soovitajate nimekiri</a>
+        <a href="/auth" class="btn btn-primary">Logi sisse</a>
+        <a href="/statistika" class="btn btn-primary">Statistika</a>
+    </div>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <div class="background-image"></div>
@@ -30,6 +32,7 @@
                 <button type="submit" class="btn btn-primary btn-block">Mine</button>
             </span>
         </form>
+
     </div>
 </body>
 </html>
