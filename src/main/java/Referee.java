@@ -210,7 +210,6 @@ public class Referee {
         conn.close();
     }
 
-
     public String getFirstName() {
         return firstName;
     }

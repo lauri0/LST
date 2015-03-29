@@ -39,12 +39,11 @@ public class Comment {
 
         }
         else {
-            stmt.executeUpdate("UPDATE comment SET message=" + " '" + this.message + "' " + " WHERE comment.id = " + " '" + this.id + "' " + ";");
+            stmt.executeUpdate("UPDATE comment SET message=" + " ' " + this.message + " ' " + " WHERE comment.id = " + " '" + this.id + "' " + ";");
 
         }
 
     }
-
 
     static Comment returnCommentByReferee(Referee ref, int electionId){
 
@@ -90,6 +89,9 @@ public class Comment {
         return null;
     }
 
+    public void setMessage(String newMessage) {
+        message = newMessage;
+    }
 
     public String getMessage() {
         return message;

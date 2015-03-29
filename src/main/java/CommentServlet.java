@@ -47,13 +47,20 @@ public class CommentServlet extends HttpServlet {
         System.out.println("---" + request.getAttribute("firstName"));
         String surName = request.getSession().getAttribute("surName").toString();
         String email = request.getSession().getAttribute("email").toString();
-        Comment com = new Comment(commentMessage);
-        Referee ref = new Referee(firstName, surName, occupation, email);
         try {
             if (Referee.getRefereeByName(firstName, surName) == null) {
+                Comment com = new Comment(commentMessage);
+                Referee ref = new Referee(firstName, surName, occupation ,email);
                 ref.saveRefereeDataToDataBase(com, ref);
             }
+            else {
+                Referee ref = Referee.getRefereeByName(firstName, surName);
+                Comment com = Comment.returnCommentByReferee(ref, 1);
+                com.setMessage(commentMessage);
+                com.save();
+            }
         }
+
         catch (URISyntaxException e) {
             e.printStackTrace();
         }
@@ -63,5 +70,8 @@ public class CommentServlet extends HttpServlet {
         catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
+
+        String redirectLocation = "./index";
+        response.sendRedirect(redirectLocation);
     }
 }
