@@ -8,6 +8,7 @@ $(document).ready(function() {
         $('.firstLetter').animate({width: 'toggle'});
         $("#tablediv").hide();
         $(".firstLetter").click(function(event){
+            history.pushState({}, '', "/soovitajate-nimekiri/" + $(this).attr("id"));
             $.get("random",{letter: event.target.id},function(responseJson){
                 if(responseJson!=null){
                     $("#tablediv").text("");

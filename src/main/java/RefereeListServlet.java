@@ -15,8 +15,8 @@ public class RefereeListServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        List<Referee> referees = Referee.getRefereesByFirstLetter("M");
-        request.setAttribute("refereeList", referees);
+        //List<Referee> referees = Referee.getRefereesByFirstLetter("M");
+        //request.setAttribute("refereeList", referees);
 
         request.getRequestDispatcher("/WEB-INF/referees-list.jsp").forward(request, response);
     }

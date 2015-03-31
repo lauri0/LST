@@ -72,7 +72,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>RefereesJSONServlet</servlet-name>
-        <url-pattern>/random</url-pattern>
+        <url-pattern>/soovitajate-nimekiri/random</url-pattern>
     </servlet-mapping>
 
     <servlet>

@@ -16,7 +16,7 @@
     <div class="fullscreen-content">
         <div id="candidate-intro"></div>
         <div id="candidate-name">${candidateName}</div>
-        <div id="comment">${comment}</div>
+        <div id="comment">${comment}</div>
     </div>
 
 </body>
