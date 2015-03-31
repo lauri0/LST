@@ -4,12 +4,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Soovitajate nimekiri</title>
     <link rel="stylesheet" type="text/css" href="css/background.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="/js/displayRefereeNames.js"></script>
 
 </head>
