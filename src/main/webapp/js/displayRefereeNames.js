@@ -27,4 +27,15 @@ $(document).ready(function() {
         });
 
     });
+
+    $(".firstLetter").hover(
+        function() {
+            $(this).addClass("highlight");
+        },
+        function(){
+            $(this).removeClass("highlight");
+
+        }
+    );
 })
+
