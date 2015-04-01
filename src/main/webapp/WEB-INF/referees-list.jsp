@@ -22,7 +22,7 @@
         <c:forEach items="${fn:split(alphabet, ',')}" var="item">
             <p class="firstLetter" id="${item}">${item}</p>
         </c:forEach>
-
+        
 
         <p id="tablediv">
 
