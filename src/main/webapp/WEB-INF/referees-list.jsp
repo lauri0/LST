@@ -24,9 +24,9 @@
         </c:forEach>
 
 
-        <div id="tablediv">
+        <p id="tablediv">
 
-        </div>
+        </p>
         <!-- <table id="referees-list">
         <c:forEach items="${refereeList}" var="item">
             <tr>
