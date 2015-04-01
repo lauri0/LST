@@ -81,7 +81,6 @@
     font-weight: bold;
     font-size:130%;
 
-
 }
 
 #candidate-name{
@@ -122,12 +121,21 @@
 }
 
 .firstLetter {
+    cursor:pointer;
     display:inline;
     word-spacing:4px;
     font-size: 16px;
-    font-family: Ubuntu, sans-serif;
+    /*font-family: Ubuntu, sans-serif;*/
     margin-left:10px;
+}
 
+.highlight{
+    display:inline;
+    word-spacing:4px;
+    font-weight: bold;
+    font-size:18px;
+    /*font-family: Ubuntu, sans-serif;*/
+    margin-left:10px;
 
 }
 
@@ -136,11 +144,15 @@
 }
 
 #alphabetically{
+    cursor:pointer;
     margin-left:20px;
     margin-top:20px;
+    width:100px;
 
 }
 
 #tablediv{
     margin-left:20px;
+    line-height:220%;
+    cursor:pointer;
 }
