@@ -17,12 +17,15 @@
     <div class="background-image"></div>
     <div class="fullscreen-content">
 
-        <p id="alphabetically">Tähestiku järgi</p>
+
+        <p class="displayOptions" id="alphabetically">Tähestiku järgi</p>
+        <!--<p class="displayOptions" id="recentlyAdded">Viimati lisatud</p>!-->
+
         <c:set var="alphabet" value="A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,R,S,Š,Z,T,U,V,Õ,Ä,Ö,Ü"></c:set>
         <c:forEach items="${fn:split(alphabet, ',')}" var="item">
             <p class="firstLetter" id="${item}">${item}</p>
         </c:forEach>
-        
+
 
         <p id="tablediv">
 
