@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/background.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
-
+    <%@ include file="header.jsp" %>
 </head>
 
 <body>
