@@ -162,4 +162,9 @@
     cursor:pointer;
 }
 
-
+.btn-primary.go {
+    box-shadow: none;
+    margin-bottom:0px;
+    margin-top:0px;
+    border-color:#33a6cc;
+}
