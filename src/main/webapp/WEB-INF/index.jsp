@@ -13,15 +13,9 @@
     <title>Poliitiline soovitusleht</title>
     <link rel="stylesheet" type="text/css" href="css/background.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <%@ include file="header.jsp" %>
 </head>
 <body>
-<div class='wrapper text-right'>
-    <div class="btn-group btn-group-sm">
-        <a href="/soovitajate-nimekiri" class="btn btn-primary">Soovitajate nimekiri</a>
-        <a href="/auth" class="btn btn-primary">Logi sisse</a>
-        <a href="/statistika" class="btn btn-primary">Statistika</a>
-    </div>
-</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <div class="background-image"></div>
@@ -29,7 +23,7 @@
         <form class="input-group" action="/soovitaja" method="get">
             <input type="text" name="referee" class="form-control" id="searchbar" placeholder="Sisesta soovitaja nimi">
             <span class="input-group-btn" id="button-container">
-                <button type="submit" class="btn btn-primary btn-block">Mine</button>
+                <button type="submit" class="btn btn-primary go btn-block">Mine</button>
             </span>
         </form>
 
