@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
     <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="/js/displayRefereeNames.js"></script>
-
+    <%@ include file="header.jsp" %>
 </head>
 <body>
     <div class="background-image"></div>
