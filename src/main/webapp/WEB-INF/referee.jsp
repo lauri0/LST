@@ -12,11 +12,12 @@
 
 <body>
     <div class="background-image"></div>
-    <div id="intro"><h1>Minu kandidaat Riigikogu valimistel on...</h1></div>
+    <div class="intro-container">
+        <div id="intro"><h1>Minu kandidaat Riigikogu valimistel on...</h1></div>
+    </div>
     <div class="fullscreen-content">
-        <div id="candidate-intro"></div>
-        <div id="candidate-name">${candidateName}</div>
-        <div id="comment">${comment}</div>
+        <div class="candidate-name">${candidateName}</div>
+        <div class="comment">${comment}</div>
     </div>
 
 </body>
