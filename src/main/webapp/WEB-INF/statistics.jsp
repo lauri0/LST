@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
-<html>
+<html manifest="soovitusleht.MF">
 <head>
     <title>Statistika</title>
     <link rel="stylesheet" type="text/css" href="css/background.css" />
