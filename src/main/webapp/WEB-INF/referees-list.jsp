@@ -1,19 +1,16 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<!DOCTYPE html>
-<html manifest="soovitusleht.appcache">
-<head>
+
+
+    <%@ include file="header.jsp" %>
     <link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Soovitajate nimekiri</title>
-    <link rel="stylesheet" type="text/css" href="css/background.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <script src="//code.jquery.com/jquery-latest.min.js"></script>
     <script src="/js/displayRefereeNames.js"></script>
-    <%@ include file="header.jsp" %>
 </head>
 <body>
+    <%@ include file="buttons.jsp" %>
     <div class="background-image"></div>
     <div class="fullscreen-content">
 
