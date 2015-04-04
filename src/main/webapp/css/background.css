@@ -175,3 +175,14 @@
     border-color:#33a6cc;
     font-family: Ubuntu, sans-serif;
 }
+
+.no-connection-notice-container{
+
+    display:flex;
+}
+
+.no-connection-notice{
+    margin:auto;
+    margin-top:60px;
+    font-family: Ubuntu, sans-serif;
+}
