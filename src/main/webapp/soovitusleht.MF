@@ -1,0 +1,16 @@
+CACHE MANIFEST
+
+/WEB-INF/index.jsp
+/WEB-INF/referee.jsp
+/WEB-INF/referees-list.jsp
+/WEB-INF/statistics.jsp
+
+/css/header.css
+/css/bootstrap.min.css
+/css/background.css
+/images/riigikogu_otto.jpg
+
+
+
+
+
