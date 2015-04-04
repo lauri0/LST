@@ -49,10 +49,11 @@
 
 #intro{
 
-    font-weight: 900;
+    /*font-weight: 900;*/
     font-family: Ubuntu, sans-serif;
     color:#ffffff;
     margin:auto;
+    opacity:0.8;
 
 }
 
