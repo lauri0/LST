@@ -12,6 +12,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="css/background.css" />
     <link rel="stylesheet" type="text/css" href="css/header.css" />
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
     <title></title>
 </head>
 <body>
@@ -26,7 +27,7 @@
         <a href="/auth" class="btn btn-primary btn-block">Logi sisse</a>
     </div>
     <div class="invite">
-        <a type="submit" class="btn btn-primary btn-block">Kutsu soovitama</a>
+        <a type="submit" class="btn btn-primary btn-block">Saada kutse</a>
     </div>
     <div class="statistics">
         <a href="/statistika" class="btn btn-primary btn-block">Statistika</a>
