@@ -1,16 +1,13 @@
 CACHE MANIFEST
 
-/WEB-INF/index.jsp
-/WEB-INF/referee.jsp
-/WEB-INF/referees-list.jsp
-/WEB-INF/statistics.jsp
-
-/css/header.css
+/js/displayRefereeNames.js
+/images/riigikogu_otto.jpg
+/js/jquery-latest.min.js
 /css/bootstrap.min.css
 /css/background.css
-/images/riigikogu_otto.jpg
+/css/header.css
+/js/bootstrap.min.js
 
 
-
-
-
+FALLBACK:
+/ /fallback/fallback.html
