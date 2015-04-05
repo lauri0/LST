@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="/css/background.css" />
     <link rel="stylesheet" type="text/css" href="/css/header.css" />
+    <link rel="stylesheet" type="text/css" href="/fonts/css.css" />
     <!--<link href='//fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>!-->
     <script src="/js/jquery-latest.min.js"></script>
 
