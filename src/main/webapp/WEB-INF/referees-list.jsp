@@ -4,7 +4,7 @@
 
 
     <%@ include file="header.jsp" %>
-    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <meta charset="UTF-8">
     <title>Soovitajate nimekiri</title>
     <script src="/js/displayRefereeNames.js"></script>
 <%
