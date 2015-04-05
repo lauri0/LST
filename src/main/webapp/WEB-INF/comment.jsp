@@ -8,15 +8,33 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Kommentaar</title>
+    <%@ include file="header.jsp" %>
+    <title>Kommentaari lisamine</title>
 </head>
 <body>
-    ${firstName}
-    <form action="/comment" method="post">Amet:<BR>
-        <input type="text" name="testOccupation"> <br>
-        Kommentaar:<br>
-        <input type="text" name="testComment"><br>
-        <input type="submit" value="Salvesta"/>
-    </form>
+    <%@ include file="buttons.jsp" %>
+    <div class="search-bar-container">
+        <form class="input-group" action="/comment" method="post">
+            Eesnimi: ${firstName}<br>
+            Perekonnanimi: ${surName}<br>
+            <input type="text" name="testOccupation" class="form-control" id="search-bar" placeholder="Sisesta oma amet"> <br>
+            <input type="text" name="testComment" class="form-control" id="search-bar" placeholder="Sisesta oma kommentaar"> <br>
+            <span class="input-group-btn" id="button-container">
+                <button type="submit" class="btn btn-primary go btn-block">Sisesta</button>
+            </span>
+        </form>
+
+    </div>
+
+<%--
+${firstName}
+<form action="/comment" method="post">Amet:<BR>
+    <input type="text" name="testOccupation"> <br>
+    Kommentaar:<br>
+    <input type="text" name="testComment"><br>
+    <input type="submit" value="Salvesta"/>
+</form>
+--%>
+
 </body>
 </html>

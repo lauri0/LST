@@ -7,7 +7,7 @@
 --%>
 <html>
 <head>
-    <title></title>
+    <title>Autentimine</title>
 </head>
 <body>
 </body>

@@ -1,5 +1,5 @@
 
-.home, .referees-button, .log-in, .invite, .statistics {
+.home, .referees-button, .recommend, .log-in, .invite, .statistics {
     position: fixed;
     margin-top:50px;
     width: 120px;
@@ -8,11 +8,15 @@
 }
 
 .home{
-    margin-left:57%;
+    margin-left:49%;
 }
 
 .referees-button {
-    margin-left: 65%;
+    margin-left: 57%;
+}
+
+.recommend {
+    margin-left:65%
 }
 
 .log-in{

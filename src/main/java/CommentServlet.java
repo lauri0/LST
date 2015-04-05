@@ -16,11 +16,34 @@ public class CommentServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         //doPost(request, response);
-        request.getRequestDispatcher("/WEB-INF/comment.jsp").forward(request, response);
+        if (request.getSession().getAttribute("signinStatus") != null) {
+            request.getRequestDispatcher("/WEB-INF/comment.jsp").forward(request, response);
+
+        }
+        else {
+            response.sendRedirect("./auth");
+            request.getSession().setAttribute("origin", "index");
+            request.getSession().setAttribute("originjsp", "comment");
+        }
+        //request.getRequestDispatcher("/WEB-INF/comment.jsp").forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+/*
+        try {
+            if (request.getSession().getAttributeNames("signinStatus") != "1") {
+                request.getRequestDispatcher("/WEB-INF/auth.jsp").forward(request, response);
 
+            }
+            else {
+
+            }
+        }
+
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+        */
         String occupation = request.getParameter("testOccupation");
         String commentMessage = request.getParameter("testComment");
         System.out.println(commentMessage);

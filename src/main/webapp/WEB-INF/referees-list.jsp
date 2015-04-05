@@ -8,6 +8,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <title>Soovitajate nimekiri</title>
     <script src="/js/displayRefereeNames.js"></script>
+<%
+    request.getSession().setAttribute("origin", "soovitajate-nimekiri");
+%>
 </head>
 <body>
     <%@ include file="buttons.jsp" %>

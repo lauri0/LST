@@ -17,7 +17,8 @@ public class RefereeListServlet extends HttpServlet {
 
         //List<Referee> referees = Referee.getRefereesByFirstLetter("M");
         //request.setAttribute("refereeList", referees);
-
+        request.getSession().setAttribute("origin", "soovitajate-nimekiri");
+        request.getSession().setAttribute("originjsp", "referees-list");
         request.getRequestDispatcher("/WEB-INF/referees-list.jsp").forward(request, response);
     }
 }
