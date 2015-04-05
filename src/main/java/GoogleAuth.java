@@ -23,6 +23,7 @@ public final class GoogleAuth {
      * Callback URI that google will redirect to after successful authentication
      */
     private static final String CALLBACK_URI = "https://nameless-hollows-9873.herokuapp.com/auth";
+    public static final String HOME = "https://nameless-hollows-9873.herokuapp.com/";
 
     // Google authentication constants
     private static final Iterable<String> SCOPE = Arrays.asList("https://www.googleapis.com/auth/userinfo.profile;https://www.googleapis.com/auth/userinfo.email".split(";"));

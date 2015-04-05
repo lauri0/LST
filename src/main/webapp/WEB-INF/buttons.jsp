@@ -14,6 +14,9 @@
 <div class="referees-button">
     <a href="/soovitajate-nimekiri" class="btn btn-primary btn-block">Soovitajad</a>
 </div>
+<div class="recommend">
+    <a href="/comment" class="btn btn-primary btn-block">Soovita</a>
+</div>
 <div class="log-in">
     <a href="/auth" class="btn btn-primary btn-block">Logi sisse</a>
 </div>

@@ -9,6 +9,10 @@
     <%@ include file="header.jsp" %>
     <title>Poliitiline soovitusleht</title>
 </head>
+<%
+    request.getSession().setAttribute("origin", "index");
+    request.getSession().setAttribute("originjsp", "index");
+%>
 <body>
     <%@ include file="buttons.jsp" %>
     <script src="js/bootstrap.min.js"></script>

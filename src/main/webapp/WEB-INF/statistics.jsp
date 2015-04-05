@@ -16,5 +16,9 @@
     <div class="fullscreen-content">
         <div id="statistics">${statistics} soovitajat</div>
     </div>
+<%
+    request.getSession().setAttribute("origin", "statistika");
+    request.getSession().setAttribute("originjsp", "statistics");
+%>
 </body>
 </html>
