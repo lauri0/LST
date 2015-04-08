@@ -1,7 +1,7 @@
 .background-image{
 
    /* background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');*/
-    background-image:url('/images/riigikogu_otto.jpg');
+    background-image:url('/images/riigikogu_laeta.jpg');
 
     background-size: cover; /* specifies the size of the background images*/
     display: block;
@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
 }
 
 .search-bar-container{
@@ -110,15 +110,6 @@
 }
 
 #referees-list{
-    margin-left:40px;
-    margin-right:40px;
-    margin-top:50px;
-    text-align:justify;
-    font-family: sans-serif;
-    font-size:130%;
-}
-
-#statistics{
     margin-left:40px;
     margin-right:40px;
     margin-top:50px;
