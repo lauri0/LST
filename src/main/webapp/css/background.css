@@ -118,6 +118,15 @@
     font-size:130%;
 }
 
+#stats{
+    margin-left:40px;
+    margin-right:40px;
+    margin-top:50px;
+    text-align:justify;
+    font-family: Ubuntu, sans-serif;
+    font-size:18px;
+}
+
 .firstLetter {
     cursor:pointer;
     display:inline-block;
