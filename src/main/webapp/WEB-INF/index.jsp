@@ -8,6 +8,7 @@
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <%@ include file="header.jsp" %>
     <title>Poliitiline soovitusleht</title>
+    <script src="/js/index.js"></script>
 </head>
 <%
     request.getSession().setAttribute("origin", "index");
@@ -18,12 +19,18 @@
     <script src="js/bootstrap.min.js"></script>
     <div class="background-image"></div>
     <div class="search-bar-container">
-        <form class="input-group" action="/soovitaja" method="get">
-            <input type="text" name="referee" class="form-control" id="search-bar" placeholder="Sisesta soovitaja nimi">
-            <span class="input-group-btn" id="button-container">
-                <button type="submit" class="btn btn-primary go btn-block">Mine</button>
-            </span>
-        </form>
+        <div id="form-and-text-container" class="input-group" >
+            <div id="intro-text"><p id="app-intro-text">Tihti kuuleme nurinat, et pole kedagi valida või et ei tunne kandidaate. Kandidaatide nimekirjas ei ole meie lemmikuid või isikuid, keda usaldada. Aga meil kõigil on oma lemmikud, keda me usaldame – poliitik, omavalitsustegelane, ajakirjanik, teadlane, näitleja.. ühesõnaga tuntud inimene – ja kelle arvamus on meile oluline. Need on inimesed, kes ise ei kandideeri, kuid kes on enda jaoks välja selgitanud kandidaadid, keda nemad usaldavad, kelle poolt nad hääletavad ja keda nad soovitavad valida ka oma fännidel.</p></div>
+            <div class="expandable">
+                <span class="sign-toggle glyphicon glyphicon-plus-sign"></span>
+            </div>
+            <form id="people-search-bar" action="/soovitaja" method="get">
+                <input type="text" name="referee" class="form-control" id="search-bar" placeholder="Sisesta soovitaja nimi">
+                <span class="input-group-btn" id="button-container">
+                    <button type="submit" class="btn btn-primary go btn-block">Mine</button>
+                </span>
+            </form>
+        </div>
 
     </div>
 </body>
