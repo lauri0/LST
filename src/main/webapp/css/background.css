@@ -15,25 +15,40 @@
 }
 
 .search-bar-container{
-    background: rgba(225,225,225, 0.55); /* 4th parameter is alpha - opacity from 0-1 */
-    border-radius: 3px; /*rounded corners to elements */
-    height: 250px;
+    background: rgba(225,225,225, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
+    border-radius: 5px; /*rounded corners to elements */
+    height: 350px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    top: 300px;
+    top: 270px;
 
     display:flex;
 
     left: 0;
-    width: 800px;
+    width: 950px;
     position: fixed;
     margin-left: auto;
     margin-right: auto;
     right: 0;
-    z-index: 2; /* element with greater stack order is always in front of an element with a lower stack order */
     padding: 0 10px; /* text padding from each side */
 }
 
+
+.expandable{
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+    margin-bottom:10px;
+}
+
+#intro-text{
+    height:130px;
+    overflow:hidden;
+}
+
+#app-intro-text{
+    text-align: justify;
+}
 .intro-container{
     width:800px;
     height:10%;
@@ -79,11 +94,11 @@
     width:600px;
 }
 #button-container{
-    width: 90px;
+    width: 15%;
 }
 
 #search-bar{
-    width:550px;
+    width:84%;
 }
 
 .candidate-name{
