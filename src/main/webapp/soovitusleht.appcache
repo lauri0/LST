@@ -1,13 +1,13 @@
-CACHE MANIFEST
+#CACHE MANIFEST
 
-/js/displayRefereeNames.js
-/images/riigikogu_otto.jpg
-/js/jquery-latest.min.js
-/css/bootstrap.min.css
-/css/background.css
-/css/header.css
-/js/bootstrap.min.js
+#/js/displayRefereeNames.js
+#/images/riigikogu_otto.jpg
+#/js/jquery-latest.min.js
+#/css/bootstrap.min.css
+#/css/background.css
+#/css/header.css
+#/js/bootstrap.min.js
 
 
-FALLBACK:
-/fallback/fallback.html
+#FALLBACK:
+#/fallback/fallback.html
