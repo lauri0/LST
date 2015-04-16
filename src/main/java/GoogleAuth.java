@@ -22,9 +22,13 @@ public final class GoogleAuth {
     /**
      * Callback URI that google will redirect to after successful authentication
      */
+
     private static final String CALLBACK_URI = "https://nameless-hollows-9873.herokuapp.com/auth";
     public static final String HOME = "https://nameless-hollows-9873.herokuapp.com/";
-
+/*
+    private static final String CALLBACK_URI = "http://localhost:8088/auth";
+    public static final String HOME = "http://localhost:8088/";
+*/
     // Google authentication constants
     private static final Iterable<String> SCOPE = Arrays.asList("https://www.googleapis.com/auth/userinfo.profile;https://www.googleapis.com/auth/userinfo.email".split(";"));
     private static final String USER_INFO_URL = "https://www.googleapis.com/oauth2/v1/userinfo";

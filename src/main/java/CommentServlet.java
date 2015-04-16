@@ -18,7 +18,6 @@ public class CommentServlet extends HttpServlet {
         //doPost(request, response);
         if (request.getSession().getAttribute("signinStatus") != null) {
             request.getRequestDispatcher("/WEB-INF/comment.jsp").forward(request, response);
-
         }
         else {
             response.sendRedirect("./auth");

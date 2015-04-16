@@ -24,7 +24,7 @@
         <a href="/auth" class="btn btn-primary btn-block button">Logi sisse</a>
     </div>
     <div id="invite">
-        <a href="/index" class="btn btn-primary btn-block button">Saada kutse</a>
+        <a href="/invite" class="btn btn-primary btn-block button">Saada kutse</a>
     </div>
     <div id="statistics">
         <a href="/statistika" class="btn btn-primary btn-block button">Statistika</a>
