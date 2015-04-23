@@ -87,6 +87,51 @@ public class Referee {
         return null;
     }
 
+    static List<Referee> getRefereesByFirstNameLetter(String letter){
+
+        List <Referee> referees = null;
+        Connection conn = null;
+        PreparedStatement stmt = null;
+
+        try{
+
+            conn = DatabaseConnection.getConnection();
+            referees = new ArrayList<Referee>();
+
+
+            String selectStatement = "SELECT * FROM referee WHERE first_name LIKE ?";
+            stmt = conn.prepareStatement(selectStatement);
+            stmt.setString(1, letter + "%");
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()){
+
+                int id = rs.getInt("id");
+                String fName = rs.getString("first_name");
+                String lName = rs.getString("last_name");
+                String occupation = rs.getString("occupation");
+                String email = rs.getString("email");
+                Referee referee = new Referee(id, fName, lName, occupation, email);
+
+                referees.add(referee);
+            }
+
+            stmt.close();
+            conn.close();
+
+            return referees;
+
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
     static List<Referee> getRefereesByFirstLetter(String firstLetter) {
 
         List<Referee> referees = null;
