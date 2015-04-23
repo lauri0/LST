@@ -48,6 +48,11 @@
 
 #app-intro-text{
     text-align: justify;
+    font-family: Ubuntu, sans-serif;
+}
+
+.sign-toggle{
+    cursor:pointer;
 }
 .intro-container{
     width:800px;
