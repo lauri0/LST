@@ -17,7 +17,30 @@ $(document).ready(function(){
        }
 
         $(this).toggleClass("glyphicon-plus-sign glyphicon-minus-sign");
-    })
+    });
 
+        $("#search-bar").autocomplete({
+        source: function(request, response){
+                $.ajax({
+                    url:"SearchServlet",
+                    type:"GET",
+                    data:{
+                        term: request.term
+                    },
+                    dataType: "json",
+                    success: function(data){
+                        response($.map(data,function(v,i){
+                           return{
+                               label: v.firstName + " " + v.lastName + ", " + v.occupation,
+                               value: v.firstName + " " + v.lastName + ", " + v.occupation
+                           }
+                        }));
+
+
+                    }
+
+                });
+            }
+        });
 
 });
