@@ -12,15 +12,6 @@
         <url-pattern>/tere</url-pattern>
     </servlet-mapping>
 
-    <!--<servlet>
-        <servlet-name>ChoiceServlet</servlet-name>
-        <servlet-class>main.java.ChoiceServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>ChoiceServlet</servlet-name>
-        <url-pattern>/choice</url-pattern>
-    </servlet-mapping> -->
-
     <servlet>
         <servlet-name>CommentServlet</servlet-name>
         <servlet-class>CommentServlet</servlet-class>
@@ -85,6 +76,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>PushServlet</servlet-name>
+        <servlet-class>PushServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PushServlet</servlet-name>
+        <url-pattern>/PushServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>ElectionServlet</servlet-name>
         <servlet-class>ElectionServlet</servlet-class>
     </servlet>
@@ -92,6 +92,7 @@
         <servlet-name>ElectionServlet</servlet-name>
         <url-pattern>/statistika</url-pattern>
     </servlet-mapping>
+
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>

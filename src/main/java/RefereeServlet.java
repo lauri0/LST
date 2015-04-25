@@ -19,7 +19,6 @@ import java.util.List;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-
         String refereeName = request.getParameter("referee");
         System.out.println(refereeName);
         String[] nameComponents = refereeName.split(" ");
@@ -38,9 +37,8 @@ import java.util.List;
         String commentMessage = comment.getMessage();
         //request.setAttribute("ref", ref);
         //String refereesCandidate = Referee.returnRefereesCandidate(firstName, lastName);
-        request.setAttribute("candidateName",candidateFirstName + " " + candidateLastName);
+        request.setAttribute("candidateName", candidateFirstName + " " + candidateLastName);
         request.setAttribute("comment", commentMessage);
-
 
         request.getRequestDispatcher("/WEB-INF/referee.jsp").forward(request, response);
 
