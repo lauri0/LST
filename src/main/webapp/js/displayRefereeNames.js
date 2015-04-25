@@ -8,10 +8,13 @@ function displayNames(id){
             for(var i=0;i<responseJson.length;i++){
                 var obj = responseJson[i];
                 var name = obj.firstName + " " + obj.lastName + ", " + obj.occupation;
-                var n = document.createTextNode(name);
+                var n = document.createElement("a");
+                n.setAttribute("href","/soovitaja?referee=" + obj.firstName + "+" + obj.lastName + '%2C+' + obj.occupation);
+                n.appendChild(document.createTextNode(name));
                 var nameHolder = document.getElementById("tablediv");
                 nameHolder.appendChild(n);
                 nameHolder.appendChild(document.createElement("br"));
+
             }
 
             $("#tablediv").show();

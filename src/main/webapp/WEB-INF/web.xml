@@ -63,7 +63,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>RefereeListServlet</servlet-name>
-        <url-pattern>/soovitajate-nimekiri</url-pattern>
+        <url-pattern>/soovitajate-nimekiri/*</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -83,7 +83,7 @@
         <servlet-name>PushServlet</servlet-name>
         <url-pattern>/PushServlet</url-pattern>
     </servlet-mapping>
-
+    
     <servlet>
         <servlet-name>ElectionServlet</servlet-name>
         <servlet-class>ElectionServlet</servlet-class>
@@ -92,7 +92,16 @@
         <servlet-name>ElectionServlet</servlet-name>
         <url-pattern>/statistika</url-pattern>
     </servlet-mapping>
-
+    
+    <servlet>
+        <servlet-name>SearchServlet</servlet-name>
+        <servlet-class>SearchServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchServlet</servlet-name>
+        <url-pattern>/SearchServlet</url-pattern>
+    </servlet-mapping>
+    
     <jsp-config>
         <jsp-property-group>
             <url-pattern>*.jsp</url-pattern>
@@ -104,5 +113,9 @@
         <extension>manifest</extension>
         <mime-type>text/cache-manifest</mime-type>
     </mime-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
 
 </web-app>

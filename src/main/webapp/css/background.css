@@ -17,10 +17,10 @@
 .search-bar-container{
     background: rgba(225,225,225, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
     border-radius: 5px; /*rounded corners to elements */
-    height: 350px;
+    height: 380px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    top: 270px;
+    top: 230px;
 
     display:flex;
 
@@ -48,6 +48,11 @@
 
 #app-intro-text{
     text-align: justify;
+    font-family: Ubuntu, sans-serif;
+}
+
+.sign-toggle{
+    cursor:pointer;
 }
 .intro-container{
     width:800px;
