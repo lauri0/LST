@@ -3,6 +3,8 @@
  */
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.URISyntaxException;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +20,8 @@ public class PushServlet extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
 
         PrintWriter writer = response.getWriter();
-        int minute = 0;
+
+/*        int minute = 0;
         for (int second = 0; second < 3600; second++) {
 
             if (second == 60) {
@@ -39,7 +42,34 @@ public class PushServlet extends HttpServlet {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        }*/
+
+        Election election = new Election(1);
+        String stats = null;
+
+        for (int i = 0; i < 3600; i++) {
+            try {
+                stats = election.returnNumberOfReferees();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+
+            writer.write("event:statUpdate\n");
+            writer.write("data: " + stats + "\n\n");
+            writer.flush();
+
+            try {
+                Thread.sleep(5000);
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
+
         writer.close();
     }
 }

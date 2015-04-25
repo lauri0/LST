@@ -14,13 +14,7 @@
 <%@ include file="buttons.jsp" %>
 <div class="background-image"></div>
 <div class="fullscreen-content">
-    <center id="stats">${statistics} soovitajat</center><br><br><br><br>
-    <center>
-        <font size="4">Olete olnud sellel lehel</font>
-        <font size="4" id="min"></font>
-        <font size="4">:</font>
-        <font size="4" id="sec"></font>
-    </center>
+    <br><br><font size="4" id="stats">${statistics}</font><font size ="4">soovitajat</font>
 </div>
 <%
     request.getSession().setAttribute("origin", "statistika");
@@ -29,17 +23,11 @@
 </body>
 </html>
 <script>
-    start();
-</script>
-<script>
     function start() {
         var eventSource = new EventSource("PushServlet");
 
-        eventSource.addEventListener('second', function(event) {
-            document.getElementById('sec').innerHTML = event.data;
-        }, false);
-        eventSource.addEventListener('minute', function(event) {
-            document.getElementById('min').innerHTML = event.data;
+        eventSource.addEventListener('statUpdate', function(event) {
+            document.getElementById('stats').innerHTML = event.data;
         }, false);
     }
 
