@@ -72,7 +72,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>RefereeListServlet</servlet-name>
-        <url-pattern>/soovitajate-nimekiri</url-pattern>
+        <url-pattern>/soovitajate-nimekiri/*</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -113,5 +113,9 @@
         <extension>manifest</extension>
         <mime-type>text/cache-manifest</mime-type>
     </mime-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index</welcome-file>
+    </welcome-file-list>
 
 </web-app>
