@@ -36,8 +36,11 @@ public class Election {
             String electionType = rs.getString("type");
             int numberOfRefereesPerElection = rs.getInt("soovitajate_arv");
 
+            conn.close();
+            stmt.close();
             return electionType + ": " + numberOfRefereesPerElection;
         }
+
         conn.close();
         stmt.close();
 
