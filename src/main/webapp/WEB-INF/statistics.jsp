@@ -14,7 +14,7 @@
 <%@ include file="buttons.jsp" %>
 <div class="background-image"></div>
 <div class="fullscreen-content">
-    <br><br><font size="4" id="stats">${statistics}</font><font size ="4">soovitajat</font>
+    <p id="stats">${statistics} soovitajat</p>
 </div>
 <%
     request.getSession().setAttribute("origin", "statistika");
