@@ -15,6 +15,7 @@ function displayNames(id){
                 nameHolder.appendChild(n);
                 nameHolder.appendChild(document.createElement("br"));
 
+
             }
 
             $("#tablediv").show();
@@ -25,6 +26,12 @@ function displayNames(id){
 
 $(document).ready(function() {
     var shown = false;
+    var pathname = window.location.pathname;
+    var last_url_segment = pathname.substr(pathname.lastIndexOf("/")+1);
+    if(last_url_segment.length == 1 && last_url_segment.match(/[a-z\-_õäüö]/i)){
+        var upper = last_url_segment.toUpperCase();
+        displayNames(upper);
+    }
     $(".firstLetter").click(function(e){
         history.pushState({"l": e.target.id}, '', "/soovitajate-nimekiri/" + $(this).attr("id"));
         displayNames(e.target.id);
