@@ -8,6 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <%@ include file="header.jsp" %>
+<script src="/js/statistics.js"></script>
 <title>Statistika</title>
 </head>
 <body>
@@ -20,16 +21,6 @@
     request.getSession().setAttribute("origin", "statistika");
     request.getSession().setAttribute("originjsp", "statistics");
 %>
+start()
 </body>
 </html>
-<script>
-    function start() {
-        var eventSource = new EventSource("PushServlet");
-
-        eventSource.addEventListener('statUpdate', function(event) {
-            document.getElementById('stats').innerHTML = event.data;
-        }, false);
-    }
-
-    start()
-</script>
