@@ -17,7 +17,7 @@
     <div class="search-bar-container">
         <form class="input-group" action="/invite" method="post">
             <p>Kutsu tuttav soovitama</p>
-            <input type="text" name="recipient" class="form-control" id="search-bar" placeholder="Sisesta kutsutava meiliaadress">
+            <input type="text" name="recipient" class="form-control" placeholder="Sisesta kutsutava meiliaadress">
 
             <input type="text" name="subject" class="form-control" id="search-bar" placeholder="Sisesta meili pealkiri">
 
