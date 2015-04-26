@@ -21,6 +21,6 @@
     request.getSession().setAttribute("origin", "statistika");
     request.getSession().setAttribute("originjsp", "statistics");
 %>
-start()
+<script>start()</script>
 </body>
 </html>
