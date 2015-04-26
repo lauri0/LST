@@ -18,8 +18,9 @@
         <form class="input-group" action="/invite" method="post">
             <p>Kutsu tuttav soovitama</p>
             <input type="text" name="recipient" class="form-control" id="search-bar" placeholder="Sisesta kutsutava meiliaadress">
-            
-            <input type="text" name="subject" class="form-control" id="search-bar" placeholder="Sisesta meili pealkiri"> <br>
+
+            <input type="text" name="subject" class="form-control" id="search-bar" placeholder="Sisesta meili pealkiri">
+
             <textarea name = "contents" rows="5" cols="62" placeholder="Sisesta kutse sisu"></textarea>
             <span class="input-group-btn" id="button-container">
                 <button type="submit" class="btn btn-primary go btn-block">Saada</button>
