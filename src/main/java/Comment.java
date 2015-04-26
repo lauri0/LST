@@ -43,6 +43,9 @@ public class Comment {
 
         }
 
+        conn.close();
+        stmt.close();
+
     }
 
     static Comment returnCommentByReferee(Referee ref, int electionId){
