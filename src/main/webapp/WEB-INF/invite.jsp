@@ -5,10 +5,11 @@
   Time: 03:05
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
+    <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <%@ include file="header.jsp" %>
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css" />
+    <script src="/js/index.js"></script>
+    <script src="/js/jquery-ui.js"></script>
     <title>Soovitaja kutsumine</title>
 </head>
 <body>
