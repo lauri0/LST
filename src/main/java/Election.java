@@ -40,7 +40,7 @@ public class Election {
         }
         conn.close();
         stmt.close();
-        
+
         return null;
     }
 
