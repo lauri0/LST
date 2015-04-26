@@ -38,7 +38,9 @@ public class Election {
 
             return electionType + ": " + numberOfRefereesPerElection;
         }
-
+        conn.close();
+        stmt.close();
+        
         return null;
     }
 
