@@ -63,7 +63,7 @@ public class PushServlet extends HttpServlet {
             writer.flush();
 
             try {
-                Thread.sleep(5000);
+                Thread.sleep(50000);
             }
             catch (InterruptedException e) {
                 e.printStackTrace();
