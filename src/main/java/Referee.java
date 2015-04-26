@@ -184,7 +184,7 @@ public class Referee {
     void save() throws ClassNotFoundException, SQLException, URISyntaxException {
 
         Connection conn = null;
-        Statement stmt = null;
+        PreparedStatement stmt2 = null;
 
         conn = DatabaseConnection.getConnection();
 
@@ -198,7 +198,7 @@ public class Referee {
         // if referee_id = -1, it means that he is not saved to database. Lets add referee info to referee table, and return he's autoincremented id with RETURNING. Referees id is valuated to this number.
         if(this.id == NOT_SAVED){
             String insertStatement = "INSERT INTO referee (first_name, last_name, occupation, email) VALUES (?,?,?,?) RETURNING id;";
-            PreparedStatement stmt2 = conn.prepareStatement(insertStatement);
+            stmt2 = conn.prepareStatement(insertStatement);
             stmt2.setString(1, firstName);
             stmt2.setString(2, lastName);
             stmt2.setString(3, occupation);
@@ -214,7 +214,7 @@ public class Referee {
         //referee_id has already been saved. In that case, lets update information about referee.
         else{
             String updateStatement = "UPDATE referee SET first_name=?, last_name=?,occupation=?, email=? WHERE id=?;";
-            PreparedStatement stmt2 = conn.prepareStatement(updateStatement);
+            stmt2 = conn.prepareStatement(updateStatement);
             stmt2.setString(1, firstName);
             stmt2.setString(2, lastName);
             stmt2.setString(3, occupation);
@@ -223,6 +223,9 @@ public class Referee {
             stmt2.execute();
 
         }
+
+        conn.close();
+        stmt2.close();
 
 
     }
