@@ -17,15 +17,18 @@
 .search-bar-container{
     background: rgba(225,225,225, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
     border-radius: 5px; /*rounded corners to elements */
-    height: 380px;
+    /*height: 380px;*/
+    height: 27em;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    top: 230px;
+    /*top: 230px;*/
+    top: 16.5em;
 
     display:flex;
 
     left: 0;
-    width: 950px;
+    /*width: 950px;*/
+    width: 68em;
     position: fixed;
     margin-left: auto;
     margin-right: auto;
