@@ -47,6 +47,10 @@ body{
     cursor:pointer;
 }
 
+#invisible{
+    width:60vw;
+    height:69px;
+}
 
 #intro{
     width:60vw;
