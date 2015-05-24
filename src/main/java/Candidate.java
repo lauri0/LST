@@ -25,18 +25,12 @@ public class Candidate {
 
         int refId = ref.getId();
 
-        Connection conn = null;
-        Statement stmt = null;
-
-        try {
-
-            Connection connection = DatabaseConnection.getConnection();
-            stmt = connection.createStatement();
+        try(Connection connection = DatabaseConnection.getConnection();
+             Statement stmt = connection.createStatement()){
 
             System.out.println("SELECT * FROM candidate INNER JOIN referee_choices ON (referee_choices.candidate_id=candidate.id) WHERE referee_id = " + Integer.toString(refId) + ";");
             String sql = "SELECT * FROM candidate INNER JOIN referee_choices ON (referee_choices.candidate_id=candidate.id) WHERE referee_id = " + Integer.toString(refId) + ";";
             ResultSet rs = stmt.executeQuery(sql);
-
 
             if (rs.next()) {
 
@@ -47,11 +41,9 @@ public class Candidate {
                 String candidateWebPage = rs.getString("party_webpage");
 
                 Candidate candidate = new Candidate(candidateId,candidateFirstName, candidateLastName, candidateParty, candidateWebPage);
+
                 return candidate;
             }
-
-            connection.close();
-            stmt.close();
 
             return null;
 
