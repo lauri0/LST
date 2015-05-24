@@ -14,6 +14,12 @@
     z-index: -1;
 }
 
+#strechy-wrapper{
+    width:100%;
+    padding-bottom: 80.33%;
+    position: relative;
+}
+
 .search-bar-container{
     background: rgba(225,225,225, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
     border-radius: 5px; /*rounded corners to elements */
