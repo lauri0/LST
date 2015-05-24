@@ -31,8 +31,6 @@ public class ElectionServlet extends HttpServlet {
         System.out.println(stats);
         request.setAttribute("statistics",stats);
 
-
-        request.setAttribute("statistics",stats);
         request.getRequestDispatcher("/WEB-INF/statistics.jsp").forward(request, response);
     }
 }
