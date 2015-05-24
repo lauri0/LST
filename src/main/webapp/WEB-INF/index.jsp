@@ -22,6 +22,7 @@
     <script src="js/bootstrap.min.js"></script>
     <div class="background-image"></div>
     <div class="search-bar-container">
+        <div id="strechy-wrapper">
         <div id="form-and-text-container" class="input-group" >
             <div id="intro-text"><p id="app-intro-text">Tihti kuuleme nurinat, et pole kedagi valida või et ei tunne kandidaate. Kandidaatide nimekirjas ei ole meie lemmikuid või isikuid, keda usaldada. Aga meil kõigil on oma lemmik, keda me usaldame – poliitik, omavalitsustegelane, ajakirjanik, teadlane, näitleja.. ühesõnaga tuntud inimene –, ja kelle arvamus on meile oluline. Need on inimesed, kes ise ei kandideeri, kuid kes on enda jaoks välja selgitanud kandidaadid, keda nemad usaldavad, kelle poolt nad hääletavad ja keda nad soovitavad valida ka oma fännidel.</p></div>
             <div class="expandable">
@@ -30,11 +31,12 @@
             <form id="people-search-bar" action="/soovitaja" method="get">
                 <input type="text" name="referee" class="form-control" id="search-bar" placeholder="Sisesta soovitaja nimi">
                 <span class="input-group-btn" id="button-container">
-                    <button type="submit" class="btn btn-primary go btn-block">Mine</button>
+                    <button type="submit" class="btn btn-primary go btn-block" id="go-button">Mine</button>
                 </span>
             </form>
         </div>
 
+    </div>
     </div>
 </body>
 </html>
