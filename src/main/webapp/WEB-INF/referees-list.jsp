@@ -14,7 +14,7 @@
 <body>
     <%@ include file="buttons.jsp" %>
     <div class="fullscreen-content">
-        
+
         <p class="displayOptions" id="alphabetically">Tähestiku järgi</p>
         <!--<p class="displayOptions" id="recentlyAdded">Viimati lisatud</p>!-->
 
