@@ -1,41 +1,42 @@
+html{
+    background:url('/images/riigikogu_laeta.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+body{
+    background: transparent;
+    height: 100%;
+}
 .background-image{
 
-   /* background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');*/
+    /*background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');
     background-image:url('/images/riigikogu_laeta.jpg');
 
-    background-size: cover; /* specifies the size of the background images*/
+
     display: block;
-    filter: blur(3px); /*enne oli 5*/
-    -webkit-filter: blur(5px); /*enne oli 15*/
+    filter: blur(3px);
+    -webkit-filter: blur(5px);
     height:100%;
     left: 0;
     right: 0;
     position: fixed;
     z-index: -1;
+    */
+
 }
 
-#strechy-wrapper{
-    width:100%;
-    padding-bottom: 30%;
-    position: relative;
-}
 
 .search-bar-container{
+    margin-top:5%;
     background: rgba(225,225,225, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
     border-radius: 5px; /*rounded corners to elements */
-    /*height: 380px;*/
-    height: 49%;
+    height: 43vh;
+    width:60vw;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    /*top: 230px;*/
-    top: 30%;
-
     display:flex;
-
     left: 0;
-    /*width: 950px;*/
-    width: 61%;
-    position: fixed;
     margin-left: auto;
     margin-right: auto;
     right: 0;
@@ -63,6 +64,7 @@
 .sign-toggle{
     cursor:pointer;
 }
+
 .intro-container{
     width:800px;
     height:10%;
@@ -105,14 +107,16 @@
 
 .input-group{
     margin:auto;
-    width:600px;
+    width:80%;
 }
 #button-container{
     width: 15%;
+    float: right;
 }
 
 #search-bar{
-    width:84%;
+    width:85%;
+    minwidth: 30vw;
 }
 
 .candidate-name{
@@ -202,6 +206,7 @@
     margin-top:0px;
     border-color:#33a6cc;
     font-family: Ubuntu, sans-serif;
+
 }
 
 .no-connection-notice-container{
