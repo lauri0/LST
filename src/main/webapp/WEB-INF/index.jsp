@@ -32,7 +32,7 @@
                 <span class="input-group-btn" id="button-container">
                     <button type="submit" class="btn btn-primary go btn-block" id="go-button">Mine</button>
                 </span>
-                <input type="text" name="referee" class="form-control" id="search-bar" placeholder="Sisesta soovitaja nimi">
+                <input type="text" name="referee" class="form-control" id="search-bar" placeholder="Sisesta soovitaja">
 
             </form>
         </div>
