@@ -3,7 +3,6 @@ import java.net.URISyntaxException;
 import java.sql.*;
 
 
-
 public class Comment {
 
     public static final int NOT_SAVED = -1;
@@ -32,7 +31,7 @@ public class Comment {
 
         if(this.id == NOT_SAVED){
 
-            stmt.execute("INSERT INTO comment (message) VALUES (" + " ' " + this.message + " ') " + " RETURNING id;");
+            stmt.execute("INSERT INTO comment (message) VALUES (" + " '" + this.message + "') " + " RETURNING id;");
             ResultSet rs = stmt.getResultSet();
             rs.next();
             this.id = rs.getInt("id");
@@ -52,15 +51,10 @@ public class Comment {
 
         int refId = ref.getId();
 
-        Connection conn = null;
-        Statement stmt = null;
+        try(Connection conn = DatabaseConnection.getConnection();
+            Statement stmt = conn.createStatement()){
 
-        try{
-
-            conn = DatabaseConnection.getConnection();
-            stmt = conn.createStatement();
-
-            System.out.println("SELECT * FROM comment INNER JOIN referee_choices ON (comment.id = referee_choices.comment_id) WHERE referee_id = " + Integer.toString(refId) + " AND election_id = " + Integer.toString(electionId) + ";");
+            //System.out.println("SELECT * FROM comment INNER JOIN referee_choices ON (comment.id = referee_choices.comment_id) WHERE referee_id = " + Integer.toString(refId) + " AND election_id = " + Integer.toString(electionId) + ";");
             String sql = "SELECT * FROM comment INNER JOIN referee_choices ON (comment.id = referee_choices.comment_id) WHERE referee_id = " + Integer.toString(refId) + " AND election_id = " + Integer.toString(electionId) + ";";
             ResultSet rs = stmt.executeQuery(sql);
 
@@ -75,9 +69,6 @@ public class Comment {
                 return comment;
 
             }
-
-            stmt.close();
-            conn.close();
 
             return null;
 

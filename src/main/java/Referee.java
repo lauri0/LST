@@ -147,7 +147,7 @@ public class Referee {
 
             System.out.println("SELECT * FROM referee WHERE last_name LIKE " + "'" + firstLetter + '%' + "'" + " ORDER BY last_name ASC;");
 
-            sql = "SELECT * FROM referee WHERE last_name LIKE " + "'" + firstLetter + '%' + "'" + " ORDER BY last_name ASC;";
+            sql = "SELECT * FROM referee WHERE last_name LIKE " + "'" + firstLetter  + '%' + "'" + " ORDER BY last_name ASC;";
             ResultSet rs = stmt.executeQuery(sql);
 
             while(rs.next()) {
@@ -207,8 +207,7 @@ public class Referee {
             ResultSet rs = stmt2.getResultSet();
             rs.next();
             this.id = rs.getInt("id");
-            System.out.println("Isiku id on:");
-            System.out.println(id);
+
         }
 
         //referee_id has already been saved. In that case, lets update information about referee.
@@ -223,6 +222,7 @@ public class Referee {
             stmt2.execute();
 
         }
+
 
         conn.close();
         stmt2.close();

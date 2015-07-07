@@ -5,10 +5,9 @@
 </head>
 <body>
     <%@ include file="buttons.jsp" %>
-    <div class="background-image"></div>
-    <div class="intro-container">
-        <div id="intro"><h1>Minu kandidaat Riigikogu valimistel on...</h1></div>
-    </div>
+
+    <div id="intro"><h1>Minu kandidaat Riigikogu valimistel on...</h1></div>
+
     <div class="fullscreen-content">
         <div class="candidate-name">${candidateName}</div>
         <div class="comment">${comment}</div>

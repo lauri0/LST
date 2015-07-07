@@ -24,7 +24,7 @@ public class Election {
         int electionId = getId();
         conn = DatabaseConnection.getConnection();
 
-        String selectStatement = "SELECT election.type, COUNT (*) as soovitajate_arv from election, referee_choices WHERE referee_choices.election_id = election.id AND election.id =? GROUP BY election.type;";
+        String selectStatement = "SELECT election.type, COUNT (*) as number_of_referees from election, referee_choices WHERE referee_choices.election_id = election.id AND election.id =? GROUP BY election.type;";
         stmt = conn.prepareStatement(selectStatement);
         stmt.setInt(1, electionId);
         stmt.execute();
@@ -34,10 +34,13 @@ public class Election {
         if(rs.next()){
 
             String electionType = rs.getString("type");
-            int numberOfRefereesPerElection = rs.getInt("soovitajate_arv");
+            int numberOfRefereesPerElection = rs.getInt("number_of_referees");
 
+            conn.close();
+            stmt.close();
             return electionType + ": " + numberOfRefereesPerElection;
         }
+
         conn.close();
         stmt.close();
 

@@ -1,32 +1,24 @@
-.background-image{
+html{
+    background:url('/images/udustatud2.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
 
-   /* background-image: url('http://uuseesti.ee/wp-content/uploads/2010/08/RiigikoguJogevaMv.JPG');*/
-    background-image:url('/images/riigikogu_laeta.jpg');
-
-    background-size: cover; /* specifies the size of the background images*/
-    display: block;
-    filter: blur(3px); /*enne oli 5*/
-    -webkit-filter: blur(5px); /*enne oli 15*/
-    height: 800px;
-    left: 0;
-    right: 0;
-    position: fixed;
-    z-index: -1;
+body{
+    background: transparent;
+    height: 100%;
 }
 
 .search-bar-container{
+    margin-top:5%;
     background: rgba(225,225,225, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
     border-radius: 5px; /*rounded corners to elements */
-    height: 380px;
+    height: 43vh;
+    width:60vw;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    top: 230px;
-
     display:flex;
-
     left: 0;
-    width: 950px;
-    position: fixed;
     margin-left: auto;
     margin-right: auto;
     right: 0;
@@ -54,22 +46,14 @@
 .sign-toggle{
     cursor:pointer;
 }
-.intro-container{
-    width:800px;
-    height:10%;
-    position:fixed;
-    margin-top:130px;
-    margin-left: auto;
-    margin-right: auto;
-    left:0;
-    right:0;
-    display:flex;
-    z-index: 2;
+
+#invisible{
+    width:60vw;
+    height:69px;
 }
 
 #intro{
-
-    /*font-weight: 400;*/
+    width:60vw;
     font-family: Ubuntu, sans-serif;
     color:#ffffff;
     margin:auto;
@@ -80,30 +64,29 @@
 
 .fullscreen-content{
     background: rgba(255, 255, 255, 0.8); /* 4th parameter is alpha - opacity from 0-1 */
-    height:50%;
-    width:800px;
+    margin-top: 2%;
+    height: 43vh;
+    width:60vw;
     border-radius: 3px; /*rounded corners to elements */
-    /*font-family: Helvetica Neue, Helvetica, Arial, sans-serif;*/
     left: 0;
-    position: fixed;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 230px;
     right: 0;
-    z-index: 2; /* element with greater stack order is always in front of an element with a lower stack order */
     padding: 0 10px; /* text padding from each side */
 }
 
 .input-group{
     margin:auto;
-    width:600px;
+    width:80%;
 }
 #button-container{
     width: 15%;
+    float: right;
 }
 
 #search-bar{
-    width:84%;
+    width:85%;
+    minwidth: 30vw;
 }
 
 .candidate-name{
@@ -193,6 +176,7 @@
     margin-top:0px;
     border-color:#33a6cc;
     font-family: Ubuntu, sans-serif;
+
 }
 
 .no-connection-notice-container{
