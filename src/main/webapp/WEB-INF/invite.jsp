@@ -7,9 +7,9 @@
 --%>
     <%@ page contentType="text/html;charset=UTF-8" language="java" %>
     <%@ include file="header.jsp" %>
-    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.min.css" />
     <script src="/js/index.js"></script>
-    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
     <title>Soovitaja kutsumine</title>
 </head>
 <body>
