@@ -85,6 +85,27 @@
   <build>
       <plugins>
           <plugin>
+              <groupId>com.samaxes.maven</groupId>
+              <artifactId>minify-maven-plugin</artifactId>
+              <version>1.7.4</version>
+              <executions>
+                  <execution>
+                      <id>default-minify</id>
+                      <configuration>
+                          <cssSourceFiles>
+                              <cssSourceFile>bootstrap.min.css</cssSourceFile>
+                          </cssSourceFiles>
+                          <jsSourceFiles>
+                              <jsSourceFile>index.js</jsSourceFile>
+                          </jsSourceFiles>
+                      </configuration>
+                      <goals>
+                          <goal>minify</goal>
+                      </goals>
+                  </execution>
+              </executions>
+          </plugin>
+          <plugin>
               <groupId>org.apache.maven.plugins</groupId>
               <artifactId>maven-compiler-plugin</artifactId>
               <version>3.2</version>
